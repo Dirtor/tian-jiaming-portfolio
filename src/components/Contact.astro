@@ -1,0 +1,26 @@
+---
+import SparkMark from "./SparkMark.astro";
+import { hero, projects } from "@/data/portfolio";
+---
+
+<section class="section contact-section" id="contact">
+  <div class="contact-panel">
+    <p class="section-label"><SparkMark /> Contact</p>
+    <h2>Interested in AI product systems, classroom technology, or useful automation?</h2>
+    <p>Reach out for product conversations, collaboration, or role-fit discussions.</p>
+    <div class="button-row">
+      <a class="button primary" href={`mailto:${hero.email}`}>Email me</a>
+      {projects.map((project) => (
+        <a
+          class="button"
+          href={project.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${project.title} on GitHub`}
+        >
+          {project.title}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

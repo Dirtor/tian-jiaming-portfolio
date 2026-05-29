@@ -1,0 +1,20 @@
+---
+import SparkMark from "./SparkMark.astro";
+import { profile } from "@/data/portfolio";
+---
+
+<section class="section profile-section" id="profile">
+  <p class="section-label"><SparkMark /> Profile</p>
+  <div class="profile-layout">
+    <div>
+      <h2>Finance-trained, product-led, AI-focused.</h2>
+      <p class="profile-education">{profile.education}</p>
+    </div>
+    <div class="profile-proof">
+      {profile.highlights.map((item) => <p>{item}</p>)}
+    </div>
+  </div>
+  <div class="skill-strip" aria-label="Skills and languages">
+    {profile.skills.map((skill) => <span>{skill}</span>)}
+  </div>
+</section>

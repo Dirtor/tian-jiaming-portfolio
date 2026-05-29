@@ -1,0 +1,19 @@
+---
+import SparkMark from "./SparkMark.astro";
+import { notes } from "@/data/portfolio";
+---
+
+<section class="section notes-section" id="notes">
+  <p class="section-label"><SparkMark /> Operating Notes</p>
+  <div class="notes-layout">
+    <h2>Thinking in public, before it becomes a polished case study.</h2>
+    <div class="note-list">
+      {notes.map((note, index) => (
+        <article class="note-item">
+          <span>{String(index + 1).padStart(2, "0")}</span>
+          <p>{note}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
