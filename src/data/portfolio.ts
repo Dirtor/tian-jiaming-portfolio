@@ -47,6 +47,7 @@ export const profile = {
     "CEO of 南京纳渡域界咨询有限公司, focused on AI education solutions and productized classroom support.",
     "Mingshi Capital quantitative analysis intern, researching enterprise services, AI infrastructure, AIGC, large models, AI chips, and fintech.",
     "HSBC Hong Kong risk management intern, covering credit risk analysis and KYC / AML workflow optimization.",
+    "CITIC Securities wealth management intern, supporting market research and investment brief preparation.",
     "MCM / ICM Meritorious Winner, team lead."
   ],
   skills: ["Python", "Quant modeling", "C", "LaTeX", "Photoshop", "Mandarin", "Cantonese", "English IELTS 7.0"]
