@@ -1,0 +1,18 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import SparkMark from "./SparkMark.astro";
+import { projects } from "@/data/portfolio";
+---
+
+<section class="section work-section" id="work">
+  <p class="section-label"><SparkMark /> Selected Work</p>
+  <div class="section-heading">
+    <h2>Two projects, full product-system proof.</h2>
+    <p>
+      The first project shows an AI-native classroom product. The second shows the operating system behind AI project delivery.
+    </p>
+  </div>
+  <div class="project-grid">
+    {projects.map((project, index) => <ProjectCard project={project} index={index} />)}
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+interface Props {
+  project: {
+    title: string;
+    label: string;
+    href: string;
+    description: string;
+    chinese: string;
+    meta: readonly string[];
+    theme: "dark" | "light";
+  };
+  index: number;
+}
+
+const { project, index } = Astro.props;
+---
+
+<article class={`project-card ${project.theme}`}>
+  <div class="project-card-top">
+    <span>{String(index + 1).padStart(2, "0")}</span>
+    <a href={project.href} target="_blank" rel="noreferrer">GitHub</a>
+  </div>
+  <div>
+    <p class="project-label">{project.label}</p>
+    <h3>{project.title}</h3>
+    <p class="project-description">{project.description}</p>
+    <p class="project-chinese">{project.chinese}</p>
+  </div>
+  <div class="project-meta">
+    {project.meta.map((item) => <span>{item}</span>)}
+  </div>
+</article>
