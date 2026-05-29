@@ -50,8 +50,7 @@ a {
 
 .page-shell {
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, var(--dark) 0 41rem, var(--paper) 41rem 100%);
+  background: var(--paper);
 }
 
 .section {
@@ -115,10 +114,6 @@ a {
 }
 
 @media (max-width: 760px) {
-  .page-shell {
-    background: linear-gradient(180deg, var(--dark) 0 46rem, var(--paper) 46rem 100%);
-  }
-
   .section {
     padding: 4rem 1rem;
   }
@@ -143,6 +138,8 @@ a {
   min-height: 42rem;
   padding: 1.25rem max(1.25rem, calc((100vw - var(--max-width)) / 2)) 5rem;
   color: var(--light-on-dark);
+  overflow-x: clip;
+  background: var(--dark);
 }
 
 .hero-nav {
