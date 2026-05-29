@@ -429,6 +429,12 @@ a {
   color: var(--ink-soft);
 }
 
+.project-card.light .project-label,
+.project-card.light .project-description,
+.project-card.light .project-chinese {
+  color: var(--ink);
+}
+
 .project-meta {
   justify-content: flex-start;
 }

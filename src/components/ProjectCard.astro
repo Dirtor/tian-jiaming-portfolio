@@ -18,7 +18,14 @@ const { project, index } = Astro.props;
 <article class={`project-card ${project.theme}`}>
   <div class="project-card-top">
     <span>{String(index + 1).padStart(2, "0")}</span>
-    <a href={project.href} target="_blank" rel="noreferrer">GitHub</a>
+    <a
+      href={project.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`View ${project.title} on GitHub`}
+    >
+      GitHub
+    </a>
   </div>
   <div>
     <p class="project-label">{project.label}</p>
