@@ -113,6 +113,24 @@ a {
   color: var(--ink-soft);
 }
 
+.headline-muted {
+  color: var(--ink-soft);
+}
+
+.headline-accent {
+  color: var(--accent);
+}
+
+.hero-copy .headline-muted,
+.notes-section .headline-muted,
+.contact-panel .headline-muted {
+  color: var(--muted-on-dark);
+}
+
+.contact-panel .headline-accent {
+  color: var(--accent-hot);
+}
+
 @media (max-width: 760px) {
   .section {
     padding: 4rem 1rem;
@@ -190,10 +208,10 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 12ch;
+  max-width: 13ch;
   margin: 0;
-  font-size: clamp(4.3rem, 10vw, 9.7rem);
-  line-height: 0.82;
+  font-size: clamp(3.7rem, 8vw, 7.6rem);
+  line-height: 0.88;
   letter-spacing: 0;
 }
 
@@ -300,7 +318,7 @@ a {
   }
 
   .hero-copy h1 {
-    font-size: clamp(3.45rem, 18vw, 5.2rem);
+    font-size: clamp(3rem, 14vw, 4.35rem);
   }
 
   .hero-visual {
@@ -333,11 +351,11 @@ a {
 }
 
 .section-heading h2 {
-  max-width: 12ch;
+  max-width: 14ch;
   margin: 0;
   color: var(--ink);
-  font-size: clamp(3rem, 7vw, 6.2rem);
-  line-height: 0.88;
+  font-size: clamp(2.5rem, 5.4vw, 4.7rem);
+  line-height: 0.95;
   letter-spacing: 0;
 }
 
@@ -472,8 +490,8 @@ a {
 .profile-layout h2,
 .contact-panel h2 {
   margin: 0;
-  font-size: clamp(2.8rem, 6vw, 5.8rem);
-  line-height: 0.9;
+  font-size: clamp(2.25rem, 4.8vw, 4.35rem);
+  line-height: 0.96;
   letter-spacing: 0;
 }
 
