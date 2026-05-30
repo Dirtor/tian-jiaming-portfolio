@@ -57,14 +57,35 @@ export const notes = [
 ];
 
 export const profile = {
-  education: "Soochow University, B.A. in Economics, Finance, expected June 2027",
-  highlights: [
-    "GPA 3.70 / 4.0, rank 19 / 89; Soochow University Scholarship 2024 and 2025.",
-    "CEO of 南京纳渡域界咨询有限公司, focused on AI education solutions and productized classroom support.",
-    "Mingshi Capital quantitative analysis intern, researching enterprise services, AI infrastructure, AIGC, large models, AI chips, and fintech.",
-    "HSBC Hong Kong risk management intern, covering credit risk analysis and KYC / AML workflow optimization.",
-    "CITIC Securities wealth management intern, supporting market research and investment brief preparation.",
-    "MCM / ICM Meritorious Winner, team lead."
-  ],
-  skills: ["Python", "Quant modeling", "C", "LaTeX", "Photoshop", "Mandarin", "Cantonese", "English IELTS 7.0"]
+  education: "Soochow University, B.A. in Economics & Finance, expected June 2027",
+  educationDetail: "GPA 3.70 / 4.0 · Rank 19 / 89 · Scholarship 2024 & 2025",
+  skills: ["Python", "Quant modeling", "C", "LaTeX", "Photoshop", "Mandarin", "Cantonese", "English IELTS 7.0"],
+  certifications: "CFA (in progress) · CET-6 · Machine Learning (Coursera) · MCM/ICM Meritorious Winner"
 };
+
+export const experience = [
+  {
+    company: "南京纳渡域界咨询",
+    role: "CEO",
+    period: "2025.05 – 2026.03",
+    achievement: "Built Cue.Room, an AI-native classroom system, from 0 to 1. Led product design, client onboarding, and team execution — pushed project to funding stage."
+  },
+  {
+    company: "Mingshi Capital",
+    role: "Investment Analyst Intern",
+    period: "2024.11 – 2025.01",
+    achievement: "Covered AI infrastructure, AIGC, large models, and AI chips for early-stage investment decisions. Conducted due diligence on team background, technical moat, and market validation."
+  },
+  {
+    company: "HSBC Hong Kong",
+    role: "Risk Management Intern",
+    period: "2024.07 – 2024.08",
+    achievement: "Optimized KYC / AML review templates for SME and retail loan portfolios, reducing average processing time by 30%."
+  },
+  {
+    company: "CITIC Securities",
+    role: "Wealth Management Intern",
+    period: "2024.02 – 2025.05",
+    achievement: "Supported HNW client investment briefs and asset allocation analysis across mutual funds, bonds, and structured products."
+  }
+];
