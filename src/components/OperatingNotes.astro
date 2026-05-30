@@ -11,7 +11,11 @@ import { notes } from "@/data/portfolio";
       {notes.map((note, index) => (
         <article class="note-item">
           <span>{String(index + 1).padStart(2, "0")}</span>
-          <p>{note}</p>
+          <div class="note-content">
+            <h3 class="note-title">{note.title}</h3>
+            <p class="note-body">{note.body}</p>
+            <p class="note-body note-chinese">{note.chinese}</p>
+          </div>
         </article>
       ))}
     </div>
