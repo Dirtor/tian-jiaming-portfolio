@@ -209,8 +209,8 @@ a {
 
 .hero-copy h1 {
   margin: 0;
-  font-size: clamp(3.7rem, 8vw, 7.6rem);
-  line-height: 0.88;
+  font-size: clamp(2.8rem, 4.8vw, 4.8rem);
+  line-height: 0.92;
   letter-spacing: 0;
   hyphens: none;
 }
@@ -535,12 +535,16 @@ a {
   font-size: clamp(1.9rem, 3.2vw, 3.2rem);
 }
 
-/* each phrase on its own line */
-.profile-layout h2 span span,
+/* profile: short hyphenated phrases — keep each on its own line without internal breaks */
+.profile-layout h2 span span {
+  display: block;
+  white-space: nowrap;
+}
+
+/* notes & contact: longer phrases — allow natural wrapping within each block */
 .notes-layout h2 span span,
 .contact-panel h2 span span {
   display: block;
-  white-space: nowrap;
 }
 
 .note-list {
