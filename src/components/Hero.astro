@@ -21,32 +21,32 @@ import { hero } from "@/data/portfolio";
     </div>
   </nav>
 
-  <div class="hero-grid" id="top">
+  <!-- full-width headline -->
+  <div class="hero-headline-wrap" id="top">
+    <p class="hero-kicker">AI product systems / 个人作品集</p>
+    <h1 class="lang-en">
+      <span>I turn</span> <span class="headline-muted">AI ideas</span><br>
+      <span>into real</span><br>
+      <span class="headline-accent">product systems.</span>
+    </h1>
+    <h1 class="lang-zh">
+      <span>把</span><span class="headline-muted"> AI 想法</span><br>
+      <span>变成真实</span><br>
+      <span class="headline-accent">产品系统。</span>
+    </h1>
+  </div>
+
+  <!-- two-column: copy + avatar -->
+  <div class="hero-grid">
     <div class="hero-copy">
-      <p class="hero-kicker">AI product systems / 个人作品集</p>
-
-      <h1 class="lang-en">
-        <span>I turn</span> <span class="headline-muted">AI ideas</span><br>
-        <span>into real</span><br>
-        <span class="headline-accent">product systems.</span>
-      </h1>
-      <h1 class="lang-zh">
-        <span>把</span><span class="headline-muted"> AI 想法</span><br>
-        <span>变成真实</span><br>
-        <span class="headline-accent">产品系统。</span>
-      </h1>
-
       <p class="hero-subtitle lang-en">{hero.subtitleEn}</p>
       <p class="hero-subtitle lang-zh">{hero.subtitle}</p>
-
       <p class="hero-description lang-en">{hero.description}</p>
       <p class="hero-description lang-zh">{hero.descriptionZh}</p>
-
       <div class="hero-tags" aria-label="Focus areas">
         <span class="lang-en">{hero.tags.map((tag) => <span>{tag}</span>)}</span>
         <span class="lang-zh">{hero.tagsZh.map((tag) => <span>{tag}</span>)}</span>
       </div>
-
       <div class="button-row">
         <a class="button primary" href="#work">
           <span class="lang-en">View work</span>
@@ -60,11 +60,7 @@ import { hero } from "@/data/portfolio";
     </div>
 
     <div class="hero-visual" aria-hidden="true">
-      <img
-        src="/tian-jiaming-portfolio/avatar.PNG"
-        alt=""
-        class="hero-avatar"
-      />
+      <img src="/tian-jiaming-portfolio/avatar.PNG" alt="" class="hero-avatar" />
       <div class="visual-card top-card">
         <span>01</span>
         <strong>
