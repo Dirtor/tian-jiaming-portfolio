@@ -15,7 +15,7 @@ import { notes } from "@/data/portfolio";
     </h2>
     <div class="note-list">
       {notes.map((note, index) => (
-        <article class="note-item reveal" data-delay={String(index * 0.1)}>
+        <article class="note-item reveal" data-delay={String(index * 0.18)}>
           <span>{String(index + 1).padStart(2, "0")}</span>
           <div class="note-content">
             <h3 class="note-title lang-en">{note.title}</h3>

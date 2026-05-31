@@ -55,7 +55,7 @@ a {
 
 .section {
   min-height: 100vh;
-  padding: 8rem max(1.25rem, calc((100vw - var(--max-width)) / 2));
+  padding: 6rem max(1.25rem, calc((100vw - var(--max-width)) / 2));
 }
 
 .section-label {
@@ -173,6 +173,8 @@ a {
 
 .hero-section {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   padding: 1.25rem max(1.25rem, calc((100vw - var(--max-width)) / 2)) 5rem;
   color: var(--light-on-dark);
   overflow-x: clip;
@@ -223,7 +225,9 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(14rem, 0.75fr);
   gap: 3rem;
-  align-items: end;
+  align-items: center;
+  flex: 1;
+  margin-top: 3rem;
 }
 
 .hero-copy h1 {

@@ -57,7 +57,7 @@ const { title, description } = Astro.props;
               }
             });
           },
-          { threshold: 0.12 }
+          { threshold: 0.2, rootMargin: "0px 0px -60px 0px" }
         );
 
         document.querySelectorAll(".reveal").forEach(function (el) {
