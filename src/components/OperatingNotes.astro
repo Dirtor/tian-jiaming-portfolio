@@ -4,18 +4,18 @@ import { notes } from "@/data/portfolio";
 ---
 
 <section class="section notes-section" id="notes">
-  <p class="section-label reveal" data-delay="0"><SparkMark />
+  <p class="section-label"><SparkMark />
     <span class="lang-en">Operating Notes</span>
     <span class="lang-zh">思考笔记</span>
   </p>
   <div class="notes-layout">
-    <h2 class="reveal" data-delay="0.08">
+    <h2>
       <span class="lang-en"><span>Thinking in public,</span> <span class="headline-muted">before it becomes a polished case study.</span></span>
       <span class="lang-zh"><span>公开思考，</span><span class="headline-muted">在它变成精修案例之前。</span></span>
     </h2>
     <div class="note-list">
       {notes.map((note, index) => (
-        <article class="note-item reveal" data-delay={String(index * 0.18)}>
+        <article class="note-item">
           <span>{String(index + 1).padStart(2, "0")}</span>
           <div class="note-content">
             <h3 class="note-title lang-en">{note.title}</h3>

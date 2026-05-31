@@ -23,6 +23,7 @@
 html {
   scroll-behavior: smooth;
   background: var(--dark);
+  scroll-snap-type: y proximity;
 }
 
 body {
@@ -56,6 +57,17 @@ a {
 .section {
   min-height: 100vh;
   padding: 6rem max(1.25rem, calc((100vw - var(--max-width)) / 2));
+  scroll-snap-align: start;
+  /* entrance animation — added by JS when section enters viewport */
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section.in-view {
+  opacity: 1;
+  transform: none;
 }
 
 .section-label {
@@ -179,6 +191,7 @@ a {
   color: var(--light-on-dark);
   overflow-x: clip;
   background: var(--dark);
+  scroll-snap-align: start;
 }
 
 .hero-nav {

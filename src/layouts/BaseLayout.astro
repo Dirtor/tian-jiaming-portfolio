@@ -44,24 +44,21 @@ const { title, description } = Astro.props;
           });
         }
 
-        // ── Scroll reveal ────────────────────────────
-        var observer = new IntersectionObserver(
+        // ── Section entrance animation ───────────────
+        var sectionObserver = new IntersectionObserver(
           function (entries) {
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
-                var el = entry.target;
-                var delay = el.dataset.delay || "0";
-                el.style.transitionDelay = delay + "s";
-                el.classList.add("visible");
-                observer.unobserve(el);
+                entry.target.classList.add("in-view");
+                sectionObserver.unobserve(entry.target);
               }
             });
           },
-          { threshold: 0.2, rootMargin: "0px 0px -60px 0px" }
+          { threshold: 0.15 }
         );
 
-        document.querySelectorAll(".reveal").forEach(function (el) {
-          observer.observe(el);
+        document.querySelectorAll(".section").forEach(function (s) {
+          sectionObserver.observe(s);
         });
       });
     </script>

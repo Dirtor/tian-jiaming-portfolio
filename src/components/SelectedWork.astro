@@ -5,25 +5,21 @@ import { projects } from "@/data/portfolio";
 ---
 
 <section class="section work-section" id="work">
-  <p class="section-label reveal" data-delay="0"><SparkMark />
+  <p class="section-label"><SparkMark />
     <span class="lang-en">Selected Work</span>
     <span class="lang-zh">代表项目</span>
   </p>
   <div class="section-heading">
-    <h2 class="reveal" data-delay="0.08">
+    <h2>
       <span class="lang-en"><span>Two projects,</span> <span class="headline-muted">full product-system proof.</span></span>
       <span class="lang-zh"><span>两个项目，</span><span class="headline-muted">完整的产品系统验证。</span></span>
     </h2>
-    <p class="reveal" data-delay="0.16">
+    <p>
       <span class="lang-en">The first project shows an AI-native classroom product. The second shows the operating system behind AI project delivery.</span>
       <span class="lang-zh">第一个项目展示 AI 原生课堂产品，第二个项目展示 AI 交付背后的运营系统。</span>
     </p>
   </div>
   <div class="project-grid">
-    {projects.map((project, index) => (
-      <div class="reveal" data-delay={String(index * 0.12)}>
-        <ProjectCard project={project} index={index} />
-      </div>
-    ))}
+    {projects.map((project, index) => <ProjectCard project={project} index={index} />)}
   </div>
 </section>
