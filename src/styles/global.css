@@ -23,7 +23,6 @@
 html {
   scroll-behavior: smooth;
   background: var(--dark);
-  scroll-snap-type: y proximity;
 }
 
 body {
@@ -32,6 +31,9 @@ body {
   color: var(--ink);
   background: var(--paper);
   text-rendering: optimizeLegibility;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 a {
@@ -58,6 +60,7 @@ a {
   min-height: 100vh;
   padding: 6rem max(1.25rem, calc((100vw - var(--max-width)) / 2));
   scroll-snap-align: start;
+  scroll-snap-stop: always;
   /* entrance animation — added by JS when section enters viewport */
   opacity: 0;
   transform: translateY(40px);
@@ -192,6 +195,7 @@ a {
   overflow-x: clip;
   background: var(--dark);
   scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .hero-nav {
