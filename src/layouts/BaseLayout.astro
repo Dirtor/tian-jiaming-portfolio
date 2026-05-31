@@ -32,11 +32,11 @@ const { title, description } = Astro.props;
   <body>
     <slot />
     <script>
-      import Lenis from "lenis";
       import { gsap } from "gsap";
       import { ScrollTrigger } from "gsap/ScrollTrigger";
+      import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 
-      gsap.registerPlugin(ScrollTrigger);
+      gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
       // ── Lang toggle ──────────────────────────────
       const btn = document.getElementById("lang-toggle");
@@ -49,11 +49,6 @@ const { title, description } = Astro.props;
         });
       }
 
-      // ── Lenis (used only for scrollTo, not free scroll) ──
-      const lenis = new Lenis({ duration: 1.4, smoothWheel: false });
-      gsap.ticker.add((time) => lenis.raf(time * 1000));
-      gsap.ticker.lagSmoothing(0);
-
       // ── Full-page section navigation ─────────────
       const sections = [
         ...document.querySelectorAll<HTMLElement>(".hero-section, .section"),
@@ -65,11 +60,12 @@ const { title, description } = Astro.props;
         if (index < 0 || index >= sections.length || busy) return;
         current = index;
         busy = true;
-        lenis.scrollTo(sections[index], {
-          duration: 1.4,
-          easing: (t: number) => 1 - Math.pow(1 - t, 4),
+        gsap.to(window, {
+          duration: 1.1,
+          scrollTo: { y: sections[index], autoKill: false },
+          ease: "power3.inOut",
+          onComplete: () => { busy = false; },
         });
-        setTimeout(() => { busy = false; }, 1500);
       }
 
       // Wheel: one tick = one section
@@ -85,14 +81,15 @@ const { title, description } = Astro.props;
         if (e.key === "ArrowUp"   || e.key === "PageUp"  ) goTo(current - 1);
       });
 
-      // Nav link clicks → update current index
+      // Nav link clicks → jump directly
       document.querySelectorAll(".nav-links a").forEach((link) => {
-        link.addEventListener("click", () => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
           const href = (link as HTMLAnchorElement).getAttribute("href") ?? "";
           const target = document.querySelector<HTMLElement>(href);
           if (!target) return;
           const idx = sections.indexOf(target);
-          if (idx !== -1) current = idx;
+          if (idx !== -1) goTo(idx);
         });
       });
 
