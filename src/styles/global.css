@@ -248,8 +248,9 @@ a {
 
 .hero-visual {
   position: relative;
-  min-height: 32rem;
   overflow: hidden;
+  align-self: stretch;
+  min-height: 36rem;
 }
 
 .hero-avatar {
@@ -260,22 +261,39 @@ a {
   object-fit: cover;
   object-position: center top;
   display: block;
+  /* fade left edge and right edge in one gradient */
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0,0,0,0.6) 15%,
-    black 32%
+    black 24%,
+    black 82%,
+    transparent 100%
   );
   mask-image: linear-gradient(
     to right,
     transparent 0%,
-    rgba(0,0,0,0.6) 15%,
-    black 32%
+    black 24%,
+    black 82%,
+    transparent 100%
   );
+}
+
+/* bottom fade overlay */
+.hero-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    var(--dark) 0%,
+    transparent 38%
+  );
+  pointer-events: none;
 }
 
 .visual-card {
   position: absolute;
+  z-index: 2;
   width: min(16rem, 76vw);
   min-height: 7rem;
   display: flex;
