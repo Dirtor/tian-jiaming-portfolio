@@ -196,7 +196,7 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(18rem, 0.95fr);
   gap: 3rem;
-  align-items: end;
+  align-items: stretch;
 }
 
 .hero-kicker {
@@ -248,20 +248,30 @@ a {
 
 .hero-visual {
   position: relative;
-  min-height: 28rem;
-  display: flex;
-  align-items: stretch;
+  min-height: 32rem;
+  overflow: hidden;
 }
 
 .hero-avatar {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  min-height: 28rem;
   object-fit: cover;
   object-position: center top;
-  border-radius: var(--radius);
   display: block;
-  opacity: 0.92;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.6) 15%,
+    black 32%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0,0,0,0.6) 15%,
+    black 32%
+  );
 }
 
 .visual-card {
@@ -328,12 +338,8 @@ a {
     font-size: clamp(3rem, 14vw, 4.35rem);
   }
 
-  .hero-avatar {
-    min-height: 20rem;
-  }
-
   .hero-visual {
-    min-height: 20rem;
+    min-height: 22rem;
   }
 
   .visual-card {
