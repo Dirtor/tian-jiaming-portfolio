@@ -312,42 +312,53 @@ a {
 .visual-card {
   position: absolute;
   z-index: 2;
-  width: min(16rem, 76vw);
-  min-height: 7rem;
+  width: min(13rem, 68vw);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  padding: 0.9rem 1rem;
-  border-radius: var(--radius);
-  background: rgba(17, 17, 20, 0.82);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(246, 242, 234, 0.12);
+  gap: 0.45rem;
+  padding: 1rem 1.15rem 1.1rem;
+  border-radius: calc(var(--radius) + 2px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   color: var(--light-on-dark);
 }
 
-.visual-card span {
+.card-num {
+  margin: 0;
   color: var(--accent);
-  font-size: 0.78rem;
+  font-size: 0.68rem;
   font-weight: 820;
+  letter-spacing: 0.12em;
 }
 
-.visual-card strong {
-  max-width: 12rem;
-  font-size: 1.15rem;
-  line-height: 1.1;
+.card-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 740;
+  line-height: 1.25;
+}
+
+.card-sub {
+  margin: 0;
+  font-size: 0.72rem;
+  opacity: 0.55;
+  letter-spacing: 0.02em;
 }
 
 .top-card {
-  top: 1rem;
-  left: 1rem;
+  top: 1.5rem;
+  right: 0.75rem;
+  background: rgba(14, 14, 17, 0.78);
+  border: 1px solid rgba(246, 242, 234, 0.1);
+  border-left: 2px solid var(--accent);
 }
 
 .bottom-card {
-  bottom: 1rem;
-  right: 1rem;
-  background: rgba(255, 59, 20, 0.15);
-  border-color: rgba(255, 59, 20, 0.3);
+  bottom: 2rem;
+  left: 1rem;
+  background: rgba(255, 59, 20, 0.08);
+  border: 1px solid rgba(255, 59, 20, 0.25);
+  border-left: 2px solid var(--accent-hot);
 }
 
 @media (max-width: 900px) {
