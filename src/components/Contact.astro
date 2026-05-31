@@ -5,11 +5,23 @@ import { hero, projects } from "@/data/portfolio";
 
 <section class="section contact-section" id="contact">
   <div class="contact-panel">
-    <p class="section-label"><SparkMark /> Contact</p>
-    <h2><span>Interested in</span> <span class="headline-accent">AI product systems,</span> <span class="headline-muted">classroom technology, or useful automation?</span></h2>
-    <p>Reach out for product conversations, collaboration, or role-fit discussions.</p>
+    <p class="section-label"><SparkMark />
+      <span class="lang-en">Contact</span>
+      <span class="lang-zh">联系我</span>
+    </p>
+    <h2>
+      <span class="lang-en"><span>Interested in</span> <span class="headline-accent">AI product systems,</span> <span class="headline-muted">classroom technology, or useful automation?</span></span>
+      <span class="lang-zh"><span>对</span><span class="headline-accent"> AI 产品系统、</span><span class="headline-muted">课堂技术或实用自动化感兴趣？</span></span>
+    </h2>
+    <p>
+      <span class="lang-en">Reach out for product conversations, collaboration, or role-fit discussions.</span>
+      <span class="lang-zh">欢迎就产品方向、合作机会或职位匹配展开对话。</span>
+    </p>
     <div class="button-row">
-      <a class="button primary" href={`mailto:${hero.email}`}>Email me</a>
+      <a class="button primary" href={`mailto:${hero.email}`}>
+        <span class="lang-en">Email me</span>
+        <span class="lang-zh">发邮件</span>
+      </a>
       {projects.map((project) => (
         <a
           class="button"

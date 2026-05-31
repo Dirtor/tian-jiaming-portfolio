@@ -4,14 +4,23 @@ import { profile, experience } from "@/data/portfolio";
 ---
 
 <section class="section profile-section" id="profile">
-  <p class="section-label"><SparkMark /> Profile</p>
+  <p class="section-label"><SparkMark />
+    <span class="lang-en">Profile</span>
+    <span class="lang-zh">关于我</span>
+  </p>
 
   <div class="profile-layout">
     <div class="profile-intro">
-      <h2><span>Finance-trained,</span> <span class="headline-muted">product-led,</span> <span class="headline-accent">AI-focused.</span></h2>
-      <p class="profile-education">{profile.education}</p>
-      <p class="profile-education-detail">{profile.educationDetail}</p>
-      <p class="profile-certs">{profile.certifications}</p>
+      <h2>
+        <span class="lang-en"><span>Finance-trained,</span> <span class="headline-muted">product-led,</span> <span class="headline-accent">AI-focused.</span></span>
+        <span class="lang-zh"><span>金融出身，</span><span class="headline-muted">产品驱动，</span><span class="headline-accent">专注 AI。</span></span>
+      </h2>
+      <p class="profile-education lang-en">{profile.education}</p>
+      <p class="profile-education lang-zh">{profile.educationZh}</p>
+      <p class="profile-education-detail lang-en">{profile.educationDetail}</p>
+      <p class="profile-education-detail lang-zh">{profile.educationDetailZh}</p>
+      <p class="profile-certs lang-en">{profile.certifications}</p>
+      <p class="profile-certs lang-zh">{profile.certificationsZh}</p>
     </div>
     <div class="profile-avatar-wrap">
       <img
@@ -29,12 +38,15 @@ import { profile, experience } from "@/data/portfolio";
       <div class="experience-item">
         <div class="experience-header">
           <div class="experience-left">
-            <span class="experience-company">{item.company}</span>
-            <span class="experience-role">{item.role}</span>
+            <span class="experience-company lang-en">{item.companyEn ?? item.company}</span>
+            <span class="experience-company lang-zh">{item.companyZh ?? item.company}</span>
+            <span class="experience-role lang-en">{item.role}</span>
+            <span class="experience-role lang-zh">{item.roleZh}</span>
           </div>
           <span class="experience-period">{item.period}</span>
         </div>
-        <p class="experience-achievement">{item.achievement}</p>
+        <p class="experience-achievement lang-en">{item.achievement}</p>
+        <p class="experience-achievement lang-zh">{item.achievementZh}</p>
       </div>
     ))}
   </div>
