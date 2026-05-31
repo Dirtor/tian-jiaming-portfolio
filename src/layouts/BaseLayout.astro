@@ -64,14 +64,17 @@ const { title, description } = Astro.props;
           duration: 1.1,
           scrollTo: { y: sections[index], autoKill: false },
           ease: "power3.inOut",
-          onComplete: () => { busy = false; },
         });
+        // Unlock after animation + buffer so inertia events don't re-trigger
+        setTimeout(() => { busy = false; }, 1600);
       }
 
       // Wheel: one tick = one section
       window.addEventListener("wheel", (e) => {
         e.preventDefault();
         if (busy) return;
+        // Ignore tiny inertia/momentum events from trackpad
+        if (Math.abs(e.deltaY) < 15) return;
         goTo(e.deltaY > 0 ? current + 1 : current - 1);
       }, { passive: false });
 
