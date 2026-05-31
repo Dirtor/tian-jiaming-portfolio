@@ -208,7 +208,6 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 20ch;
   margin: 0;
   font-size: clamp(3.7rem, 8vw, 7.6rem);
   line-height: 0.88;
