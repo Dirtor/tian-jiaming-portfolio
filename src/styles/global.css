@@ -54,6 +54,10 @@ a {
 }
 
 .section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 6rem max(1.25rem, calc((100vw - var(--max-width)) / 2));
 }
 
@@ -133,7 +137,12 @@ a {
 
 @media (max-width: 760px) {
   .section {
-    padding: 4rem 1rem;
+    min-height: auto;
+    padding: 5rem 1rem;
+  }
+
+  .hero-section {
+    min-height: auto;
   }
 
   .button {
@@ -166,8 +175,11 @@ a {
 }
 
 .hero-section {
-  min-height: 42rem;
-  padding: 1.25rem max(1.25rem, calc((100vw - var(--max-width)) / 2)) 5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25rem max(1.25rem, calc((100vw - var(--max-width)) / 2)) 4rem;
   color: var(--light-on-dark);
   overflow-x: clip;
   background: var(--dark);
