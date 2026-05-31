@@ -4,12 +4,12 @@ import { profile, experience } from "@/data/portfolio";
 ---
 
 <section class="section profile-section" id="profile">
-  <p class="section-label"><SparkMark />
+  <p class="section-label reveal" data-delay="0"><SparkMark />
     <span class="lang-en">Profile</span>
     <span class="lang-zh">关于我</span>
   </p>
 
-  <div class="profile-layout">
+  <div class="profile-layout reveal" data-delay="0.08">
     <div class="profile-intro">
       <h2>
         <span class="lang-en"><span>Finance-trained,</span> <span class="headline-muted">product-led,</span> <span class="headline-accent">AI-focused.</span></span>
@@ -34,8 +34,8 @@ import { profile, experience } from "@/data/portfolio";
   </div>
 
   <div class="experience-list" aria-label="Work experience">
-    {experience.map((item) => (
-      <div class="experience-item">
+    {experience.map((item, index) => (
+      <div class="experience-item reveal" data-delay={String(index * 0.08)}>
         <div class="experience-header">
           <div class="experience-left">
             <span class="experience-company lang-en">{item.companyEn ?? item.company}</span>

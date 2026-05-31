@@ -152,6 +152,19 @@ a {
   }
 }
 
+/* ── Scroll reveal ───────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hero-section {
   min-height: 42rem;
   padding: 1.25rem max(1.25rem, calc((100vw - var(--max-width)) / 2)) 5rem;
@@ -408,6 +421,11 @@ a {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+}
+
+.project-grid > .reveal {
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card {
