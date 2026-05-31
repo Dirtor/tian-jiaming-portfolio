@@ -529,6 +529,13 @@ a {
   letter-spacing: 0;
 }
 
+/* each phrase on its own line */
+.profile-layout h2 span span,
+.notes-layout h2 span span,
+.contact-panel h2 span span {
+  display: block;
+}
+
 .note-list {
   display: grid;
   gap: 0;
