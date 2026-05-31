@@ -64,15 +64,19 @@ const { title, description } = Astro.props;
       gsap.ticker.lagSmoothing(0);
 
       // ── Section entrance animations ───────────────
+      // Only animate y (no opacity) so section backgrounds stay visible
       gsap.utils.toArray<HTMLElement>(".section").forEach((section) => {
-        gsap.from(section, {
+        // Animate the direct children so backgrounds aren't affected
+        const children = Array.from(section.children) as HTMLElement[];
+        gsap.from(children, {
           opacity: 0,
-          y: 60,
-          duration: 1,
+          y: 50,
+          duration: 0.9,
           ease: "power3.out",
+          stagger: 0.08,
           scrollTrigger: {
             trigger: section,
-            start: "top 80%",
+            start: "top 72%",
             once: true,
           },
         });
