@@ -208,11 +208,12 @@ a {
 }
 
 .hero-copy h1 {
-  max-width: 13ch;
+  max-width: 20ch;
   margin: 0;
   font-size: clamp(3.7rem, 8vw, 7.6rem);
   line-height: 0.88;
   letter-spacing: 0;
+  hyphens: none;
 }
 
 .hero-subtitle {
@@ -527,6 +528,12 @@ a {
   font-size: clamp(2.25rem, 4.8vw, 4.35rem);
   line-height: 0.96;
   letter-spacing: 0;
+  hyphens: none;
+}
+
+/* profile h2 is shorter phrases — needs smaller size so hyphenated words fit on one line */
+.profile-layout h2 {
+  font-size: clamp(1.9rem, 3.2vw, 3.2rem);
 }
 
 /* each phrase on its own line */
@@ -534,6 +541,7 @@ a {
 .notes-layout h2 span span,
 .contact-panel h2 span span {
   display: block;
+  white-space: nowrap;
 }
 
 .note-list {
