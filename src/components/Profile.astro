@@ -7,13 +7,20 @@ import { profile, experience } from "@/data/portfolio";
   <p class="section-label"><SparkMark /> Profile</p>
 
   <div class="profile-layout">
-    <div>
+    <div class="profile-intro">
       <h2><span>Finance-trained,</span> <span class="headline-muted">product-led,</span> <span class="headline-accent">AI-focused.</span></h2>
       <p class="profile-education">{profile.education}</p>
       <p class="profile-education-detail">{profile.educationDetail}</p>
-    </div>
-    <div>
       <p class="profile-certs">{profile.certifications}</p>
+    </div>
+    <div class="profile-avatar-wrap">
+      <img
+        src="/tian-jiaming-portfolio/avatar.PNG"
+        alt="Tian Jiaming"
+        class="profile-avatar"
+        width="420"
+        height="420"
+      />
     </div>
   </div>
 

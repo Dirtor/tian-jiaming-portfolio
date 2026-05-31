@@ -549,6 +549,12 @@ a {
   background: var(--paper);
 }
 
+.profile-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
 .profile-education {
   max-width: 30rem;
   margin: 0 0 0.3rem;
@@ -566,10 +572,35 @@ a {
 }
 
 .profile-certs {
-  margin: 0;
+  margin: 0.5rem 0 0;
   color: var(--ink-soft);
   font-size: 0.9rem;
   line-height: 1.7;
+}
+
+.profile-avatar-wrap {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.profile-avatar {
+  width: 100%;
+  max-width: 22rem;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .profile-avatar-wrap {
+    justify-content: flex-start;
+  }
+
+  .profile-avatar {
+    max-width: 16rem;
+  }
 }
 
 .experience-list {
