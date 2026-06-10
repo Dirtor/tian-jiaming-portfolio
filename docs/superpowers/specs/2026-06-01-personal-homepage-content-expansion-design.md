@@ -26,6 +26,7 @@ Secondary future audience:
 - Do not make the homepage look like a conventional resume template.
 - Do not publish private fundraising details, exact investor names, unapproved screenshots, unfinished UI, phone number, or non-public customer details.
 - Do not change the hero direction or color system.
+- Do not describe OmniNexus and Cue.AI as the same project. They are separate projects running in parallel.
 
 ## Recommended Homepage Structure
 
@@ -56,7 +57,7 @@ Candidate proof signals:
 - MCM/ICM team lead, Meritorious Winner.
 - National Second Prize in Advanced Mathematics Competition.
 - ICAN Innovation and Entrepreneurship Competition National Gold Award, project lead.
-- One SSCI Q2 paper accepted.
+- One SSCI Q2 paper accepted: `极端天气事件对全球保险市场的影响：风险管理和赔偿成本的经济分析`.
 
 Suggested public wording:
 - `10+ teachers using Cue.Room`
@@ -64,12 +65,26 @@ Suggested public wording:
 - `0-to-1 AI classroom system`
 - `Internal AI team operating system`
 - `CEO, OmniNexus`
-- `SSCI Q2 accepted paper`
+- `SSCI Q2 accepted paper on climate risk and insurance markets`
 
 Avoid:
 - Overstating traction as large-scale deployment.
 - Naming partners unless approved later.
 - Disclosing financing details.
+
+### Project Relationship Wording
+
+OmniNexus and Cue.AI should be treated as two separate projects, even though they are being developed in parallel.
+
+Recommended public framing:
+- OmniNexus: a separate project / company-facing identity where Tian is CEO.
+- Cue.AI: a separate AI product system project where Tian is also CEO; it includes Cue.Room and Cue.Hub.
+- Cue.Room and Cue.Hub can be presented as the two strongest current product examples under the Cue.AI direction.
+
+Avoid:
+- Calling OmniNexus the English name of Cue.AI.
+- Making it sound like Cue.AI and OmniNexus are one project.
+- Collapsing both into a single company or product unless the user later decides that public framing should change.
 
 ### 3. Selected Work
 
@@ -161,10 +176,10 @@ Example:
 Keep the profile section, but organize it into credibility clusters rather than a loose resume block.
 
 Recommended clusters:
-- Founder / builder: CEO of OmniNexus; Cue.Room and Cue.Hub.
+- Founder / builder: CEO of OmniNexus and CEO of Cue.AI, with Cue.Room and Cue.Hub as the current Cue.AI product examples.
 - Finance and product judgment: Soochow University economics and finance; prior overseas asset allocation work; investment research experience.
 - Institutional experience: Mingshi Capital, HSBC Hong Kong, CITIC Securities, Zheshang Securities.
-- Awards and research: MCM/ICM Meritorious Winner as team lead, Advanced Mathematics Competition National Second Prize, ICAN National Gold Award as project lead, SSCI Q2 accepted paper.
+- Awards and research: MCM/ICM Meritorious Winner as team lead, Advanced Mathematics Competition National Second Prize, ICAN National Gold Award as project lead, and an accepted SSCI Q2 paper titled `极端天气事件对全球保险市场的影响：风险管理和赔偿成本的经济分析`.
 - Skills and languages: current skill list can remain, later refined if needed.
 
 Need date update:
@@ -224,6 +239,6 @@ No major visual redesign is required.
 - No job-search positioning appears.
 - Cue.Room includes 10+ teachers, around 100 classroom sessions, public deployment, role, current stage, and core modules.
 - Cue.Hub includes internal use, public deployment, GitHub / WeCom / task / AI review / daily review / evening review, and team operating system framing.
-- Profile includes OmniNexus CEO, Zheshang Securities 2026.02 - 2026.04, MCM/ICM team lead, Advanced Mathematics Competition National Second Prize, ICAN National Gold Award as project lead, and SSCI Q2 accepted paper.
+- Profile includes OmniNexus CEO and Cue.AI CEO, makes clear that OmniNexus and Cue.AI are separate parallel projects, and includes Zheshang Securities 2026.02 - 2026.04, MCM/ICM team lead, Advanced Mathematics Competition National Second Prize, ICAN National Gold Award as project lead, and the accepted SSCI Q2 paper title.
 - Contact emphasizes investment / financing conversations and business collaboration.
 - Public wording avoids unverifiable overclaims and private financing or customer details.

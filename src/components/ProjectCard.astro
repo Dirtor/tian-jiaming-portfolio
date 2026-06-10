@@ -3,9 +3,21 @@ interface Props {
   project: {
     title: string;
     label: string;
+    labelZh: string;
+    role: string;
+    roleZh: string;
+    stage: string;
+    stageZh: string;
     href: string;
     description: string;
     chinese: string;
+    contribution: string;
+    contributionZh: string;
+    system: string;
+    systemZh: string;
+    evidence: readonly string[];
+    evidenceZh: readonly string[];
+    links: readonly { label: string; href: string }[];
     meta: readonly string[];
     theme: "dark" | "light";
   };
@@ -24,14 +36,39 @@ const { project, index } = Astro.props;
       rel="noopener noreferrer"
       aria-label={`View ${project.title} on GitHub`}
     >
-      GitHub
+      View
     </a>
   </div>
-  <div>
-    <p class="project-label">{project.label}</p>
+  <div class="project-main">
+    <p class="project-label lang-en">{project.label}</p>
+    <p class="project-label lang-zh">{project.labelZh}</p>
     <h3>{project.title}</h3>
-    <p class="project-description">{project.description}</p>
-    <p class="project-chinese">{project.chinese}</p>
+    <div class="project-role-row">
+      <span class="lang-en">{project.role}</span>
+      <span class="lang-zh">{project.roleZh}</span>
+      <span class="lang-en">{project.stage}</span>
+      <span class="lang-zh">{project.stageZh}</span>
+    </div>
+    <p class="project-description lang-en">{project.description}</p>
+    <p class="project-chinese lang-zh">{project.chinese}</p>
+    <p class="project-description lang-en">{project.system}</p>
+    <p class="project-chinese lang-zh">{project.systemZh}</p>
+  </div>
+  <div class="project-proof">
+    <div class="project-evidence" aria-label={`${project.title} evidence`}>
+      <span class="project-proof-label">Evidence</span>
+      <div class="lang-en">
+        {project.evidence.map((item) => <span>{item}</span>)}
+      </div>
+      <div class="lang-zh">
+        {project.evidenceZh.map((item) => <span>{item}</span>)}
+      </div>
+    </div>
+    <div class="project-links">
+      {project.links.map((link) => (
+        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+      ))}
+    </div>
   </div>
   <div class="project-meta">
     {project.meta.map((item) => <span>{item}</span>)}

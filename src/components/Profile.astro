@@ -22,19 +22,20 @@ import { profile, experience } from "@/data/portfolio";
       <p class="profile-certs lang-en">{profile.certifications}</p>
       <p class="profile-certs lang-zh">{profile.certificationsZh}</p>
     </div>
-    <div class="profile-avatar-wrap">
-      <img
-        src="/tian-jiaming-portfolio/avatar.PNG"
-        alt="Tian Jiaming"
-        class="profile-avatar"
-        width="420"
-        height="420"
-      />
+    <div class="profile-signals" aria-label="Profile signals">
+      {profile.signals.map((signal) => (
+        <div class="profile-signal">
+          <span class="profile-signal-label lang-en">{signal.label}</span>
+          <span class="profile-signal-label lang-zh">{signal.labelZh}</span>
+          <span class="profile-signal-value lang-en">{signal.value}</span>
+          <span class="profile-signal-value lang-zh">{signal.valueZh}</span>
+        </div>
+      ))}
     </div>
   </div>
 
   <div class="experience-list" aria-label="Work experience">
-    {experience.map((item, index) => (
+    {experience.map((item) => (
       <div class="experience-item">
         <div class="experience-header">
           <div class="experience-left">
@@ -45,8 +46,6 @@ import { profile, experience } from "@/data/portfolio";
           </div>
           <span class="experience-period">{item.period}</span>
         </div>
-        <p class="experience-achievement lang-en">{item.achievement}</p>
-        <p class="experience-achievement lang-zh">{item.achievementZh}</p>
       </div>
     ))}
   </div>

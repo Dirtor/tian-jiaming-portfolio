@@ -1,27 +1,29 @@
 ---
 import SparkMark from "./SparkMark.astro";
-import { notes } from "@/data/portfolio";
+import { workPrinciples } from "@/data/portfolio";
 ---
 
 <section class="section notes-section" id="notes">
   <p class="section-label"><SparkMark />
-    <span class="lang-en">Operating Notes</span>
-    <span class="lang-zh">思考笔记</span>
+    <span class="lang-en">How I Work</span>
+    <span class="lang-zh">工作方法</span>
   </p>
   <div class="notes-layout">
     <h2>
-      <span class="lang-en"><span>Thinking in public,</span> <span class="headline-muted">before it becomes a polished case study.</span></span>
-      <span class="lang-zh"><span>公开思考，</span><span class="headline-muted">在它变成精修案例之前。</span></span>
+      <span class="lang-en"><span>Principles tied to</span> <span class="headline-muted">real product work.</span></span>
+      <span class="lang-zh"><span>方法论，</span><span class="headline-muted">要回到真实产品里。</span></span>
     </h2>
     <div class="note-list">
-      {notes.map((note, index) => (
+      {workPrinciples.map((note, index) => (
         <article class="note-item">
           <span>{String(index + 1).padStart(2, "0")}</span>
           <div class="note-content">
-            <h3 class="note-title lang-en">{note.title}</h3>
-            <h3 class="note-title lang-zh">{note.titleZh}</h3>
-            <p class="note-body lang-en">{note.body}</p>
-            <p class="note-body lang-zh">{note.chinese}</p>
+            <h3 class="note-title lang-en">{note.principle}</h3>
+            <h3 class="note-title lang-zh">{note.principleZh}</h3>
+            <p class="note-body lang-en">{note.example}</p>
+            <p class="note-body lang-zh">{note.exampleZh}</p>
+            <p class="note-takeaway lang-en">{note.takeaway}</p>
+            <p class="note-takeaway lang-zh">{note.takeawayZh}</p>
           </div>
         </article>
       ))}
